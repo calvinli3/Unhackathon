@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+// Create the script ; first line loads Paper.js library, second line associates with myCanvas
+
+<script type="text/javascript" src="js/paper-full.min.js"></script>
+<script type="text/paperscript" canvas="myCanvas">
+
+// Create a path
+
+var path;
+
+// Add a text line on top of the program to indicate the purpose of the program
+
+var textItem = new PointText({
+	content: 'Test program that hypothetically reads data and outputs a graph.',
+	point: new Point(20,30),
+	
+	// Play with this color, I'm not sure how this works
+	
+	fillColor: 'pink',
+});
+
+// Testing the beginnings of my script, entering paths and attempting to make lines
+// somewhere between these two comments should be a way to input data...
+
+var myPath = new Path();
+myPath.strokeColor = 'black';
+myPath.add(new Point(0, 0), new Point(100, 50));
+
+
+// somewhere between these two comments should be a way to input data...?
+
+// to insert segments; this is to insert segment between two existing segments
+
+myPath.insert(1, new Point(30,40));
+
+
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
